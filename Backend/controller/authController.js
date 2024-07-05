@@ -102,7 +102,7 @@ exports.logout = (req, res, next) => {
     status: 'success',
   });
 };
-
+const hashLength = 12;
 exports.resetPassword = catchAsync(async (req, res, next) => {
   const { password, newPassword, passwordConfirm } = req.body;
   const email = req.user.email;
@@ -117,7 +117,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
   if (!(await bcrypt.compare(password, user.password))) {
     return next(new AppError('current password is wrong.', 401));
   }
-  const hashedPassword = await bcrypt.hash(newPassword, 12);
+  const hashedPassword = await bcrypt.hash(newPassword, hashLength);
   const updatedUser = await User.findByIdAndUpdate(
     req.user.id,
     { password: hashedPassword },
