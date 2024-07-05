@@ -1,0 +1,45 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 50%; */
+}
+.outer-chat-container {
+  width: 50%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  background-color: var(--color-grey-6);
+  padding: 3.2rem;
+  border-radius: var(--border-radius-sm);
+
+  & > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  & button {
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+    color: var(--color-white-2);
+    padding: 1.2rem;
+    border: none;
+  }
+  & input {
+    outline: none;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--border-radius-sm);
+  }
+}
+
+.btn-container {
+  & button {
+    width: 50%;
+  }
+}
