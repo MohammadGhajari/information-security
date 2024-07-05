@@ -117,7 +117,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
   if (!(await bcrypt.compare(password, user.password))) {
     return next(new AppError('current password is wrong.', 401));
   }
-  const hashedPassword = await bcrypt.hash(newPassword, process.env.SECRET_HASH_LENGTH);
+  const hashedPassword = await bcrypt.hash(newPassword, '12');
   const updatedUser = await User.findByIdAndUpdate(
     req.user.id,
     { password: hashedPassword },
