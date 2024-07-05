@@ -1,0 +1,29 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-container {
+  width: 40%;
+  display: flex;
+  gap: 1.4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-grey-6);
+  padding: 3rem;
+  border-radius: var(--border-radius-sm);
+}
+
+.nav-btn {
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-white-2);
+  padding: 1.2rem;
+  width: 100%;
+}

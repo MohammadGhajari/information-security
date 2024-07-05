@@ -1,0 +1,179 @@
+:root {
+  /* --color-primary: #c75ffe;
+    --color-primary-tint-1: #cd81f6;
+    --color-primary-tint-2: #daa6f7;
+    --color-primary-shade-1: #b846f5;
+    --color-primary-shade-2: #b63af9;
+    --color-primary-shade-3: #ac24f5; */
+
+  --color-primary: #29c129;
+  --color-primary-tint-1: #47c447;
+  --color-primary-tint-2: #67c367;
+  --color-primary-shade-1: #19b319;
+  --color-primary-shade-2: #00ac00;
+  --color-primary-shade-3: #009a00;
+  --color-primary-hover: rgba(0, 154, 0, 0.264);
+
+  /* --color-primary: #fcc100;
+    --color-primary-tint-1: rgb(249, 210, 56);
+    --color-primary-tint-2: rgb(251, 217, 96);
+    --color-primary-shade-1: #fcac00;
+    --color-primary-shade-2: rgb(253, 144, 19);
+    --color-primary-shade-3: rgb(245, 130, 0); */
+
+  /* --toastify-toast-width: 350px; */
+  --toastify-toast-width: fit-content;
+
+  --color-grey-2: #222;
+  --color-grey-3: #312f2f;
+  --color-grey-4: #444;
+  --color-grey-5: #aaa;
+  --color-grey-6: #cfcdcd;
+
+  --color-white-1: #fff;
+  --color-white-2: #eee;
+  --color-white-3: #ddd;
+  --color-white-4: #ccc;
+
+  --color-bubble-1: rgba(0, 81, 255, 0.13);
+  --color-bubble-2: rgba(0, 81, 255, 0.26);
+  /* --color-hero: #f6f6f6; */
+  --color-hero: white;
+  --color-dark: #2e475d;
+
+  --backdrop-color: rgba(255, 255, 255, 0.1);
+
+  --color-danger: #fa0000a7;
+  --color-danger-shade: #fa0000e0;
+  --shadow-sm: 0 0 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 0 2.4rem rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 0 3.2rem rgba(0, 0, 0, 0.15);
+
+  --shadow-me-sm: 0 0 3rem rgba(0, 0, 0, 0.05);
+  --shadow-me-md: 0 0 2.4rem rgba(0, 0, 0, 0.2);
+  --shadow-me-lg: 0 0 1rem rgba(0, 0, 0, 0.3);
+
+  --border-shadow: 0 0 5px 1px #29c129;
+  --border-shadow-1: 0 0 8px 3px #67c367;
+
+  --border-radius-tiny: 3px;
+  --border-radius-sm: 5px;
+  --border-radius-md: 7px;
+  --border-radius-lg: 9px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: background-color 0.2s;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "LG_GSM_V6.06", sans-serif;
+  transition: color 0.3s, background-color 0.3s;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+  height: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary-shade-2);
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #333;
+  border-radius: 50px;
+}
+
+/* #root{
+  width: 100%;
+  height: 100%;
+  background-color: #2e475d!important;
+} */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  &:focus {
+    outline: none !important;
+  }
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+*:disabled {
+  cursor: not-allowed;
+}
+
+select:disabled,
+input:disabled {
+  background-color: var(--color-grey-200);
+  color: var(--color-grey-500);
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--color-brand-600);
+  outline-offset: -1px;
+}
+
+/* Parent selector, finally 😃 */
+button:has(svg) {
+  line-height: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+img {
+  max-width: 100%;
+
+  /* For dark mode */
+  filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
+}

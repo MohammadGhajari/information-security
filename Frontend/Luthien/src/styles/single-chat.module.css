@@ -1,0 +1,112 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outer-chat-container {
+  width: 50%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  background-color: var(--color-grey-6);
+  padding: 3.2rem;
+  border-radius: var(--border-radius-sm);
+
+  & > div {
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start;
+    gap: 1.2rem;
+
+    & > div {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  & button {
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+    color: var(--color-white-2);
+    padding: 1.2rem;
+    border: none;
+  }
+  & input {
+    outline: none;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--border-radius-sm);
+  }
+}
+.send-container {
+  display: flex;
+  border: 1px solid var(--color-grey-5);
+  border-radius: var(--border-radius-sm);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  & button {
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    color: var(--color-white-2);
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-bottom-right-radius: var(--border-radius-sm);
+    width: 35%;
+  }
+
+  & input {
+    outline: none;
+    border: solid 1px var(--color-primary);
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem 1rem;
+    width: 66%;
+  }
+}
+.chat-container {
+  overflow-x: hidden;
+  overflow-y: visible !important;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  align-items: flex-start;
+  gap: 1.2rem;
+  height: 50rem;
+  padding: 0.6rem;
+  border-radius: var(--border-radius-sm);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: var(--color-grey-6);
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem;
+  background-color: var(--color-grey-5);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  border-bottom-left-radius: 0px;
+  max-width: 80%;
+
+  & > .sender {
+    font-size: 1rem;
+  }
+}
+
+.my-message {
+  background-color: greenyellow;
+  align-self: flex-end;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: var(--border-radius-md);
+}

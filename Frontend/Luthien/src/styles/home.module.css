@@ -1,0 +1,34 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+
+  & > div {
+    display: flex;
+    gap: 3.4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.nav-container {
+  display: flex;
+  /* flex-direction: row !important; */
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+.nav-btn {
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-white-2);
+  padding: 1.2rem;
+  width: 20rem;
+}

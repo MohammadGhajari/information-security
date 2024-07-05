@@ -1,0 +1,40 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-container {
+  background-color: var(--color-grey-6);
+  padding: 3.2rem;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  width: 45rem;
+
+  & .selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    & select {
+      padding: 0.6rem;
+      border: none;
+      border-radius: var(--border-radius-sm);
+    }
+  }
+
+  & button {
+    align-self: flex-end;
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+    color: var(--color-white-2);
+    padding: 1.2rem;
+    border: none;
+  }
+}
